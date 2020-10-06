@@ -1,7 +1,11 @@
 package com.codecool.bookdb;
 
+import com.codecool.bookdb.model.BookDatabaseManager;
+import com.codecool.bookdb.view.UserInterface;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        UserInterface ui = new UserInterface(System.in, System.out);
+        new BookDatabaseManager(ui).run();
     }
 }
